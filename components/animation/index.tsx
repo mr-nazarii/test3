@@ -47,7 +47,7 @@ export default function Scene({ ...props }) {
           start: '50% center',
           end: '4300 center',
           scrub: true,
-          markers: true,
+          markers: false,
           pin: true
         }
       });
