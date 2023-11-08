@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 
+export const runtime = 'edge';
+
 export default function Scene({ ...props }) {
   const videoRef = useRef(null);
   const scrollSectionRef = useRef(null);
