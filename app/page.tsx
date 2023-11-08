@@ -18,9 +18,8 @@ export default async function HomePage() {
     <div>
       {/* <ThreeItemGrid /> */}
 
-      <div style={{ height: '460vh' }}>
-        <Scene />
-      </div>
+      <Scene />
+
       <Suspense>
         {/* <Carousel /> */}
         <Suspense>
