@@ -1,5 +1,6 @@
+import Scene from 'components/animation';
 import { Carousel } from 'components/carousel';
-import { ThreeItemGrid } from 'components/grid/three-items';
+// import { ThreeItemGrid } from 'components/grid/three-items';
 import Footer from 'components/layout/footer';
 import { Suspense } from 'react';
 
@@ -14,14 +15,18 @@ export const metadata = {
 
 export default async function HomePage() {
   return (
-    <>
-      <ThreeItemGrid />
+    <div>
+      {/* <ThreeItemGrid /> */}
+
+      <div style={{ height: '460vh' }}>
+        <Scene />
+      </div>
       <Suspense>
-        <Carousel />
+        {/* <Carousel /> */}
         <Suspense>
           <Footer />
         </Suspense>
       </Suspense>
-    </>
+    </div>
   );
 }
