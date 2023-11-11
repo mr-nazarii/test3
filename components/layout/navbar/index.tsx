@@ -1,12 +1,10 @@
 import Cart from 'components/cart';
 import OpenCart from 'components/cart/open-cart';
-import LogoSquare from 'components/logo-square';
 import { getMenu } from 'lib/bigcommerce';
 import { VercelMenu as Menu } from 'lib/bigcommerce/types';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import MobileMenu from './mobile-menu';
-import Search from './search';
 // const { SITE_NAME } = process.env;
 
 export default async function Navbar() {
@@ -17,7 +15,8 @@ export default async function Navbar() {
       style={{
         borderBottom: '1px solid #00000025',
         background: '#171717a8',
-        backdropFilter: 'blur(60px)'
+        backdropFilter: 'blur(60px)',
+        visibility: 'hidden'
       }}
       className="fixed z-50 mb-0 flex w-full items-center justify-between px-20 py-4 "
     >
@@ -25,14 +24,6 @@ export default async function Navbar() {
         <MobileMenu menu={menu} />
       </div>
       <div className="flex w-full justify-between">
-        <div className="visible flex w-full  md:w-1/3">
-          <Link href="/" className="mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6">
-            {/* <LogoSquare /> */}
-            <div className="text-md ml-2  flex-none font-medium uppercase text-white  md:hidden lg:block">
-              AC INFINITY
-            </div>
-          </Link>
-        </div>
         <div className="hidden justify-center md:flex md:w-1/3">
           {/* <Search /> */}
           {menu.length ? (
